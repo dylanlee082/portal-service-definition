@@ -1,0 +1,14 @@
+type: object
+properties:
+  headline:
+    description: Deal Headline
+    type: string
+    example: Hey First Time Customers!
+  price:
+    description: Deal Definition
+    type: string
+    example: Great Deals Every Day!
+  descript:
+    description: Details of the Deal
+    type: string
+    example: First time customers get 70% off their first 1/8th flower purchase and a free pack of cones

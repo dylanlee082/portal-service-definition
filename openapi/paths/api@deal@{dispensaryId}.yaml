@@ -1,0 +1,26 @@
+get:
+  tags:
+    - Deal/Notification
+  summary: Get Overall Dispensary Deal
+  description: |
+    Send the Dispensary ID and return the overall dispensary deal
+  operationId: getDispensaryDealById
+  parameters:
+    - name: dispensaryId
+      in: path
+      description: dispensaryId of the dispensary
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/DispensaryDeal.yaml
+          example:
+            username: user1
+            email: user@example.com
+    "404":
+      description: File does not exist

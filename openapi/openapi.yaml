@@ -2,33 +2,33 @@ openapi: 3.0.3
 info:
   version: 1.0.0
   title: Example.com
-  termsOfService: 'https://example.com/terms/'
+  termsOfService: "https://example.com/terms/"
   contact:
     email: contact@example.com
-    url: 'http://example.com/contact'
+    url: "http://example.com/contact"
   license:
     name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
+    url: "https://redocly.github.io/openapi-template/logo.png"
   description:
     $ref: ./info-description.md
 externalDocs:
   description: Find out how to create a GitHub repo for your OpenAPI definition.
-  url: 'https://github.com/Rebilly/generator-openapi-repo'
+  url: "https://github.com/Rebilly/generator-openapi-repo"
 tags:
-  - name: Echo
-    description: Example echo operations.
   - name: User
-    description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
+    description: Operations for account management and user sign in
+  - name: Deal/Notification
+    description: Operations for Dispensary Deals and Notifications
+  - name: Stock
+    description: Operations for management of stock
 servers:
-  - url: 'http://example.com/api/v1'
-  - url: 'https://example.com/api/v1'
+  - url: "http://example.com/api/v1"
+  - url: "https://example.com/api/v1"
 paths:
-  '/users/{username}':
-    $ref: 'paths/users@{username}.yaml'
+  "/users/{username}":
+    $ref: "paths/api@deal@{dispensaryId}.yaml"
   /echo:
     $ref: paths/echo.yaml
   /pathItem:
@@ -41,10 +41,10 @@ components:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: 'http://example.com/api/oauth/dialog'
+          authorizationUrl: "http://example.com/api/oauth/dialog"
           scopes:
-            'read:users': read users info
-            'write:users': modify or remove users
+            "read:users": read users info
+            "write:users": modify or remove users
     api_key:
       type: apiKey
       in: header
