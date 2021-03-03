@@ -27,7 +27,7 @@ servers:
   - url: "http://example.com/api/v1"
   - url: "https://example.com/api/v1"
 paths:
-  "/users/{username}":
+  "api/deal/{username}":
     $ref: "paths/api@deal@{dispensaryId}.yaml"
   /echo:
     $ref: paths/echo.yaml
